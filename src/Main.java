@@ -7,28 +7,26 @@ import java.util.Arrays;
 
 public class Main {
 
-
     public static void main(String[] args) throws Exception {
 
         String path = "./src/data/berlin52.tsp";
-        double adj_matrix[][];
+        double adjMatrixFromFile[][];
         Parser in = new Parser(new File(path));
-        double adj_matrix2[][] = in.getAdjacencyMatrix();
+        double adjMatrixFromTspFile[][] = in.getAdjacencyMatrix();
         System.out.println("Starting...");
 
-        // Create the instance of the problem
-//        System.out.println(Arrays.deepToString(adj_matrix2));
+        System.out.println(Arrays.deepToString(adjMatrixFromTspFile));
 
         String data_path = "./src/data/data4.txt";
-        adj_matrix = utils.readFromFile(data_path);
+        adjMatrixFromFile = utils.readFromFile(data_path);
 
-        LinKernighan lk = new LinKernighan(adj_matrix2);
+        LinKernighan lk = new LinKernighan(adjMatrixFromTspFile);
 
         // Time keeping
         long start;
         start = System.currentTimeMillis();
 
-        // Shpw the results even if shutdown
+        // Show the results even if shutdown
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
                 System.out.printf("The solution took: %dms\n", System.currentTimeMillis() - start);
