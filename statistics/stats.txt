@@ -1,0 +1,76 @@
+*********************************************************************************
+File N° 1      dj38.tsp
+       Dimension :38
+       EDGE_WEIGHT_TYPE : EUC_2D
+       Known Lower Bound : 888.0
+       Min    : 5.36476386805619 , 11.827619382191655 , 11.827619382191655
+       Max    : 1858.0926127166258 , 1858.0926127166258 , 1852.3537304910717
+       Avg    : 727.7594396994701
+       Var    : 1.3972322587692212E-13
+       Median : 695.4523102331673
+--------------
+       [1] LinKernighan : 
+        		time :     141ms         distance :    6664.113571 
+       [2] 2-OPT : 
+        		time :      12ms         distance :    9748.946705
+       [3] Random Heuristic : 
+         		time :       2ms         distance :   25717.037002 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       2ms         distance :    9748.946705 
+*********************************************************************************
+File N° 2      uy734.tsp
+       Dimension :734
+       EDGE_WEIGHT_TYPE : EUC_2D
+       Known Lower Bound :  UNKNOWN
+       Min    : 5.839963427970824 , 9.566169493062848 , 9.566169493062848
+       Max    : 5746.907405630345 , 5746.907405630345 , 5733.4302360028005
+       Avg    : 2229.5358998575357
+       Var    : 5.458304842709663E-11
+       Median : 2214.72345903501
+--------------
+       [1] LinKernighan : 
+        		time :   54619ms         distance :   93393.356538 
+       [2] 2-OPT : 
+        		time :     177ms         distance :  102594.357931
+       [3] Random Heuristic : 
+         		time :       0ms         distance : 1666208.393843 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :  102594.357931 
+*********************************************************************************
+File N° 3      wi29.tsp
+       Dimension :29
+       EDGE_WEIGHT_TYPE : EUC_2D
+       Known Lower Bound :  UNKNOWN
+       Min    : 74.53561415712697 , 74.53565887848701 , 74.53565887848701
+       Max    : 9639.271595117782 , 9639.271595117782 , 9570.382625812015
+       Avg    : 3796.911459067276
+       Var    : 5.264316623562516E-13
+       Median : 3399.346296634756
+--------------
+       [1] LinKernighan : 
+        		time :      10ms         distance :   28753.027870 
+       [2] 2-OPT : 
+        		time :       1ms         distance :   36388.059232
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  112649.267810 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   36388.059232 
+*********************************************************************************
+File N° 4      qa194.tsp
+       Dimension :194
+       EDGE_WEIGHT_TYPE : EUC_2D
+       Known Lower Bound :  UNKNOWN
+       Min    : 1.0016221443283746 , 1.4164095629423863 , 1.4164095629423863
+       Max    : 1459.391996689032 , 1459.391996689032 , 1435.305822077264
+       Avg    : 479.41758253705973
+       Var    : 4.93825113865931E-13
+       Median : 465.7909813915238
+--------------
+       [1] LinKernighan : 
+        		time :    1338ms         distance :    9823.890180 
+       [2] 2-OPT : 
+        		time :       4ms         distance :   11892.888059
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   87260.203303 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   11892.888059 
