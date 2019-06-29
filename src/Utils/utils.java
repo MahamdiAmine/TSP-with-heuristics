@@ -18,7 +18,7 @@ public class utils {
             for (int i = 0; i < matrix.length; i++) {
                 String[] line = sc.nextLine().trim().split(" ");
                 for (int j = 0; j < line.length; j++) {
-                    matrix[i][j] = Integer.parseInt(line[j]);
+                    matrix[i][j] = Double.parseDouble(line[j]);
                 }
             }
         }

@@ -1,16 +1,23 @@
 package Scheduler;
 
 import TSPFileparser.Parser;
-import heuristics.*;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import Utils.utils;
+import heuristics.Insertion.Insertion;
+import heuristics.LinKernighan.LinKernighan;
+import heuristics.Neighbour.Neighbour;
+import heuristics.Parsers.Coords;
+import heuristics.Parsers.Length;
+import heuristics.Parsers.Load;
+import heuristics.Parsers.Validator;
+import heuristics.Random.Random;
+import heuristics.TwoOPT.TwoOpt;
 
 public class Scheduler {
 
@@ -34,7 +41,7 @@ public class Scheduler {
         List<Double> minMax;
         int dimension;
         double knownLowerBound;
-
+        System.out.println("\n\n\t\t");
         for (int i = 0; i < listOfFiles.length; i++) {
             String name = listOfFiles[i].getName();
             if (listOfFiles[i].isFile() && name.substring(name.length() - 3).equalsIgnoreCase("tsp")) {
@@ -116,17 +123,28 @@ public class Scheduler {
                     ArrayList<Coords> cities = new ArrayList<>(Load.loadTSPLib1(String.valueOf(listOfFiles[i]))); //alter file name here.
                     startingTime = System.currentTimeMillis();
                     Neighbour neighbour = new Neighbour(cities);
-                    long nearestNeighbourHeuristicTime = System.currentTimeMillis() - startingTime;
+                    elapsedTime = System.currentTimeMillis() - startingTime;
                     out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, Length.routeLength1(neighbour.getTour()));
                     if (debug) {
                         System.out.println(neighbour);
                     }
                 }
+                /* Insertion Heuristic*/
+                {
+                    out.println("       [5] Insertion Heuristic : ");
+                    startingTime = System.currentTimeMillis();
+                    Insertion insertion = new Insertion(adjMatrixFromTspFile);
+                    elapsedTime = System.currentTimeMillis() - startingTime;
+                    out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, insertion.getLength_path());
+                    if (debug) {
+                        System.out.println(insertion);
+                    }
+                }
+                System.out.print("✔");
             }
         }
         out.flush();
         out.close();
-
     }
 
 }

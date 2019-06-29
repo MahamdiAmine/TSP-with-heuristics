@@ -1,4 +1,4 @@
-package heuristics;
+package heuristics.LinKernighan;
 
 import TSPFileparser.Coordinates;
 import TSPFileparser.Edge;

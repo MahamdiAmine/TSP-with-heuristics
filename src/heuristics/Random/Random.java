@@ -1,4 +1,4 @@
-package heuristics;
+package heuristics.Random;
 
 import java.util.*;
 

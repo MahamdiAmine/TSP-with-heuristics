@@ -1,4 +1,4 @@
-package heuristics;
+package heuristics.Parsers;
 import java.util.ArrayList;
 
 public class Length {

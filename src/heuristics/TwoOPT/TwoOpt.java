@@ -1,4 +1,7 @@
-package heuristics;
+package heuristics.TwoOPT;
+
+import heuristics.Parsers.Coords;
+import heuristics.Parsers.Length;
 
 import java.util.ArrayList;
 

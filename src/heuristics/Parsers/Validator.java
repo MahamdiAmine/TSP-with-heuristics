@@ -1,6 +1,5 @@
-package heuristics;
+package heuristics.Parsers;
 
-import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;

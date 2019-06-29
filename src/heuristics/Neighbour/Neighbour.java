@@ -1,9 +1,9 @@
-package heuristics;/*
+package heuristics.Neighbour;/*
 run a nearest neighbour on the passed in ArrayList
 return the nearest neighbour result.
  */
 
-import TSPFileparser.Coordinates;
+import heuristics.Parsers.Coords;
 
 import java.util.ArrayList;
 

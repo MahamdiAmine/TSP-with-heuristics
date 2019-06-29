@@ -1,4 +1,4 @@
-package heuristics;
+package heuristics.Parsers;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
