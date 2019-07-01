@@ -3,10 +3,13 @@ import Scheduler.Scheduler;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        String statsPath = "./statistics/stats.txt";
-        String dataPath = "./dataWithBounds/";
-        String knownLowerBoundsPath = "./dataWithBounds/knownLowerBounds";
-        Scheduler scheduler = new Scheduler(statsPath, dataPath, knownLowerBoundsPath, false);
-        scheduler.Execute();
+        if (args.length == 3) {
+            String dataPath = args[0];
+            String knownLowerBoundsPath = args[1];
+            String statsPath = args[2];
+            Scheduler scheduler = new Scheduler(statsPath, dataPath, knownLowerBoundsPath, false);
+            scheduler.Execute();
+
+        } else System.out.println("usage :\n java -jar scheduler.jar dataPath knownLowerBoundsPath statsPath");
     }
 }

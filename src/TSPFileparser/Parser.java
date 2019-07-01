@@ -30,6 +30,7 @@ public class Parser {
     private Token getTokens(String line) throws IllegalArgumentException {
         StringTokenizer tokenizer = new StringTokenizer(line);
         try {
+
             int id = Integer.parseInt(tokenizer.nextToken());
             double x = Double.parseDouble(tokenizer.nextToken());
             double y = Double.parseDouble(tokenizer.nextToken());

@@ -30,6 +30,7 @@ public class Load {
                     readingNodes = false;
                     //Finished reading nodes
                     if (result.size() != dimension) {
+                        System.out.println(dimension+"     "+result.size());
                         //Check to see if the expected number of cities have been loaded
                         System.out.println("Error loading cities");
                         System.exit(-1);
