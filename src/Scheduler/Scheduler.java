@@ -59,42 +59,37 @@ public class Scheduler {
                     System.out.println(Arrays.deepToString(adjMatrixFromTspFile));
                 }
                 out.println("*********************************************************************************");
-                outForML.println("*********************************************************************************");
                 out.println("File N° " + (i + 1) + "      " + listOfFiles[i].getName());
-                outForML.println("File:" + (i + 1) + ":" + listOfFiles[i].getName());
                 out.println("       Dimension : " + adjMatrixFromTspFile[0].length);
-                outForML.println("Dimension:" + adjMatrixFromTspFile[0].length);
                 out.print("       Known Lower Bound : ");
-                outForML.print("Known Lower Bound:");
                 if (knownLowerBound == 0.0) {
                     out.println(" UNKNOWN");
-                    outForML.println("UNKNOWN");
                 } else {
                     out.println(knownLowerBound);
-                    outForML.println(knownLowerBound);
                 }
-                out.println("       Min    : " + minMax.get(1 + dimension) + " , " + minMax.get(dimension + 2) + " , " + minMax.get(dimension + 3));
-                outForML.println("Min:" + minMax.get(1 + dimension) + "," + minMax.get(dimension + 2) + "," + minMax.get(dimension + 3));
-                out.println("       Max    : " + minMax.get(dimension * dimension - 1) + " , " + minMax.get(dimension * dimension - 2) + " , " + minMax.get(dimension * dimension - 3));
-                outForML.println("Max:" + minMax.get(dimension * dimension - 1) + "," + minMax.get(dimension * dimension - 2) + "," + minMax.get(dimension * dimension - 3));
+                out.println("       Min    : " + minMax.get(0) + " , " + minMax.get(1) + " , " + minMax.get(2));
+                out.println("       Max    : " + minMax.get(dimension - 1) + " , " + minMax.get(dimension - 2) + " , " + minMax.get(dimension - 3));
                 out.println("       Avg    : " + utils.avg(adjMatrixFromTspFile));
-                outForML.println("Avg:" + utils.avg(adjMatrixFromTspFile));
                 out.println("       Var    : " + utils.var(adjMatrixFromTspFile));
-                outForML.println("Var:" + utils.var(adjMatrixFromTspFile));
                 out.println("       Median : " + minMax.get(Math.round(minMax.size() / 2)));
-                outForML.println("Median:" + minMax.get(Math.round(minMax.size() / 2)));
                 out.println("--------------");
-                outForML.println("--------------");
+                /*new format for Ml :*/
+                outForML.print(dimension);
+                outForML.print(" " + Utils.utils.avg(adjMatrixFromTspFile));
+                outForML.print(" " + Utils.utils.var(adjMatrixFromTspFile));
+                outForML.print(" " + minMax.get(0) + " " + minMax.get(dimension - 1) + " " + minMax.get(Math.round(minMax.size() / 2)));
+                outForML.print(" " + (minMax.get(0) + minMax.get(1) + minMax.get(2)) / 3);
+                outForML.print(" " + (minMax.get(dimension - 1) + minMax.get(dimension - 2) + minMax.get(dimension - 3)) / 3);
                 /*the LinKernighan Heuristic*/
                 {
                     LinKernighan lk = new LinKernighan(adjMatrixFromTspFile);
                     out.println("       [1] LinKernighan : ");
-                    outForML.println("[1] LinKernighan:");
                     startingTime = System.currentTimeMillis();
                     lk.runAlgorithm();
                     elapsedTime = System.currentTimeMillis() - startingTime;
                     out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, lk.getDistance());
-                    outForML.printf("time:%d,distance:%f\n", elapsedTime, lk.getDistance());
+                    // (30%/tempExecHeuristic1 + 70%/CostHeuristic1)/(1/temExexheuristic1 + 1/CostHeuristic1)
+                    outForML.print(" " + (0.3 / elapsedTime + 0.7 * lk.getDistance()) / (1 / elapsedTime + 1 / lk.getDistance()));
                     if (debug) {
                         System.out.println(lk);
                     }
@@ -105,7 +100,6 @@ public class Scheduler {
                     ArrayList<Coords> nearestN;
                     ArrayList<Coords> result;
                     out.println("       [2] 2-OPT : ");
-                    outForML.println("[2] 2-OPT:");
                     startingTime = System.currentTimeMillis();
                     double length;
                     nearestN = Neighbour.nearest1(cities);
@@ -114,7 +108,7 @@ public class Scheduler {
                     Validator.validate1(nearestN, debug);
                     elapsedTime = System.currentTimeMillis() - startingTime;
                     out.printf("        \t\ttime : %7dms         distance :%15f\n", elapsedTime, length);
-                    outForML.printf("time:%d,distance:%f\n", elapsedTime, length);
+                    outForML.print(" " + (0.3 / elapsedTime + 0.7 * length) / (1 / elapsedTime + 1 / length));
                     if (debug) {
                         int[] twoOPT_tour = new int[result.size()];
                         Arrays.fill(twoOPT_tour, 0);
@@ -127,13 +121,13 @@ public class Scheduler {
                 /* Random Heuristic*/
                 {
                     out.println("       [3] Random Heuristic : ");
-                    outForML.println("[3] Random Heuristic : ");
                     startingTime = System.currentTimeMillis();
                     Random randomHeuristic = new Random(adjMatrixFromTspFile);
                     elapsedTime = System.currentTimeMillis() - startingTime;
+                    if (elapsedTime == 0) elapsedTime = 1;
                     randomHeuristic.getRandomTour();
                     out.printf("         \t\ttime : %7dms         distance :%15f \n", elapsedTime, randomHeuristic.getDistance());
-                    outForML.printf("time:%d,distance:%f\n", elapsedTime, randomHeuristic.getDistance());
+                    outForML.print(" " + (0.3 / elapsedTime + 0.7 * randomHeuristic.getDistance()) / (1 / elapsedTime + 1 / randomHeuristic.getDistance()));
                     if (debug) {
                         System.out.println(randomHeuristic);
                     }
@@ -142,13 +136,13 @@ public class Scheduler {
                 /* Nearest Neighbour Heuristic*/
                 {
                     out.println("       [4] Nearest Neighbour Heuristic : ");
-                    outForML.println("[4] Nearest Neighbour Heuristic : ");
                     ArrayList<Coords> cities = new ArrayList<>(Load.loadTSPLib1(String.valueOf(listOfFiles[i]))); //alter file name here.
                     startingTime = System.currentTimeMillis();
                     Neighbour neighbour = new Neighbour(cities);
                     elapsedTime = System.currentTimeMillis() - startingTime;
+                    if (elapsedTime == 0) elapsedTime = 1;
                     out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, Length.routeLength1(neighbour.getTour()));
-                    outForML.printf("time:%d,distance:%f\n", elapsedTime, Length.routeLength1(neighbour.getTour()));
+                    outForML.print(" " + (0.3 / elapsedTime + 0.7 * Length.routeLength1(neighbour.getTour())) / (1 / elapsedTime + 1 / Length.routeLength1(neighbour.getTour())));
                     if (debug) {
                         System.out.println(neighbour);
                     }
@@ -156,12 +150,11 @@ public class Scheduler {
                 /* Insertion Heuristic*/
                 {
                     out.println("       [5] Insertion Heuristic : ");
-                    outForML.println("[5] Insertion Heuristic : ");
                     startingTime = System.currentTimeMillis();
                     Insertion insertion = new Insertion(adjMatrixFromTspFile);
                     elapsedTime = System.currentTimeMillis() - startingTime;
                     out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, insertion.getLength_path());
-                    outForML.printf("time:%d,distance:%f\n", elapsedTime, insertion.getLength_path());
+                    outForML.println(" " + (0.3 / elapsedTime + 0.7 * insertion.getLength_path()) / (1 / elapsedTime + 1 / insertion.getLength_path()));
                     if (debug) {
                         System.out.println(insertion);
                     }

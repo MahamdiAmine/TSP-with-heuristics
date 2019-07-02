@@ -1,5 +1,6 @@
 import Scheduler.Scheduler;
 
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -11,5 +12,6 @@ public class Main {
             scheduler.Execute();
 
         } else System.out.println("usage :\n java -jar scheduler.jar dataPath knownLowerBoundsPath statsPath");
+
     }
 }

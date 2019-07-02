@@ -32,23 +32,23 @@ public class utils {
         for (int i = 0; i < list.size(); i++) {
             value = list.get(i);
             if (value != 0.0) {
-                sum += value - avg;
+                sum += Math.pow(value - avg, 2);
             }
         }
-        return sum / (list.size() - Math.sqrt(list.size()));
+        return sum / list.size();
     }
 
     public static double avg(double[][] adjMatrix) {
         List<Double> list = minMax(adjMatrix);
         double sum = list.stream().mapToDouble(Double::doubleValue).sum();
-        return sum / (list.size() - Math.sqrt(list.size()));
+        return sum / list.size();
     }
 
     public static List<Double> minMax(double[][] adjMatrix) {
         List<Double> list = new ArrayList<>();
         int dimension = adjMatrix[0].length;
         for (int i = 0; i < dimension; i++) {
-            for (int j = 0; j < dimension; j++) {
+            for (int j = i + 1; j < dimension; j++) {
                 list.add(adjMatrix[i][j]);
             }
         }
