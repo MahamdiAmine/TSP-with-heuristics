@@ -42,9 +42,10 @@ public class Scheduler {
         PrintWriter outForML = new PrintWriter(new File(statisticsPath + ".MLFormat"));
         List<Double> minMax;
         int dimension;
-        double knownLowerBound;
-        System.out.println("\n\n\t\t");
+        double knownLowerBound, tInverse, dInverse;
         Parser in;
+        long elapsedTime1, elapsedTime2, elapsedTime3, elapsedTime4, elapsedTime5;
+        double d1, d2, d3, d4, d5;
         double[][] adjMatrixFromTspFile;
         Arrays.sort(listOfFiles);
         for (int i = 0; i < listOfFiles.length; i++) {
@@ -74,22 +75,23 @@ public class Scheduler {
                 out.println("       Median : " + minMax.get(Math.round(minMax.size() / 2)));
                 out.println("--------------");
                 /*new format for Ml :*/
-                outForML.print(dimension);
-                outForML.print(" " + Utils.utils.avg(adjMatrixFromTspFile));
-                outForML.print(" " + Utils.utils.var(adjMatrixFromTspFile));
-                outForML.print(" " + minMax.get(0) + " " + minMax.get(dimension - 1) + " " + minMax.get(Math.round(minMax.size() / 2)));
-                outForML.print(" " + (minMax.get(0) + minMax.get(1) + minMax.get(2)) / 3);
-                outForML.print(" " + (minMax.get(dimension - 1) + minMax.get(dimension - 2) + minMax.get(dimension - 3)) / 3);
+                double avg = Utils.utils.avg(adjMatrixFromTspFile);
+                double var = Utils.utils.var(adjMatrixFromTspFile);
+                double min = minMax.get(0);
+                double max = minMax.get(dimension - 1);
+                double med = minMax.get(Math.round(minMax.size() / 2));
+                double avgMin = (minMax.get(0) + minMax.get(1) + minMax.get(2)) / 3;
+                double avgMax = (minMax.get(dimension - 1) + minMax.get(dimension - 2) + minMax.get(dimension - 3)) / 3;
                 /*the LinKernighan Heuristic*/
                 {
                     LinKernighan lk = new LinKernighan(adjMatrixFromTspFile);
                     out.println("       [1] LinKernighan : ");
                     startingTime = System.currentTimeMillis();
                     lk.runAlgorithm();
-                    elapsedTime = System.currentTimeMillis() - startingTime;
+                    elapsedTime1 = System.currentTimeMillis() - startingTime;
+                    if (elapsedTime1 == 0) elapsedTime1 = 1;
                     out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, lk.getDistance());
-                    // (30%/tempExecHeuristic1 + 70%/CostHeuristic1)/(1/temExexheuristic1 + 1/CostHeuristic1)
-                    outForML.print(" " + (0.3 / elapsedTime + 0.7 * lk.getDistance()) / (1 / elapsedTime + 1 / lk.getDistance()));
+                    d1 = lk.getDistance();
                     if (debug) {
                         System.out.println(lk);
                     }
@@ -106,9 +108,10 @@ public class Scheduler {
                     result = TwoOpt.alternate1(nearestN, debug);
                     length = Length.routeLength1(nearestN);
                     Validator.validate1(nearestN, debug);
-                    elapsedTime = System.currentTimeMillis() - startingTime;
+                    elapsedTime2 = System.currentTimeMillis() - startingTime;
+                    if (elapsedTime2 == 0) elapsedTime2 = 1;
+                    d2 = length;
                     out.printf("        \t\ttime : %7dms         distance :%15f\n", elapsedTime, length);
-                    outForML.print(" " + (0.3 / elapsedTime + 0.7 * length) / (1 / elapsedTime + 1 / length));
                     if (debug) {
                         int[] twoOPT_tour = new int[result.size()];
                         Arrays.fill(twoOPT_tour, 0);
@@ -123,11 +126,11 @@ public class Scheduler {
                     out.println("       [3] Random Heuristic : ");
                     startingTime = System.currentTimeMillis();
                     Random randomHeuristic = new Random(adjMatrixFromTspFile);
-                    elapsedTime = System.currentTimeMillis() - startingTime;
-                    if (elapsedTime == 0) elapsedTime = 1;
+                    elapsedTime3 = System.currentTimeMillis() - startingTime;
+                    if (elapsedTime3 == 0) elapsedTime3 = 1;
+                    d3 = randomHeuristic.getDistance();
                     randomHeuristic.getRandomTour();
                     out.printf("         \t\ttime : %7dms         distance :%15f \n", elapsedTime, randomHeuristic.getDistance());
-                    outForML.print(" " + (0.3 / elapsedTime + 0.7 * randomHeuristic.getDistance()) / (1 / elapsedTime + 1 / randomHeuristic.getDistance()));
                     if (debug) {
                         System.out.println(randomHeuristic);
                     }
@@ -139,10 +142,10 @@ public class Scheduler {
                     ArrayList<Coords> cities = new ArrayList<>(Load.loadTSPLib1(String.valueOf(listOfFiles[i]))); //alter file name here.
                     startingTime = System.currentTimeMillis();
                     Neighbour neighbour = new Neighbour(cities);
-                    elapsedTime = System.currentTimeMillis() - startingTime;
-                    if (elapsedTime == 0) elapsedTime = 1;
+                    elapsedTime4 = System.currentTimeMillis() - startingTime;
+                    if (elapsedTime4 == 0) elapsedTime4 = 1;
+                    d4 = Length.routeLength1(neighbour.getTour());
                     out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, Length.routeLength1(neighbour.getTour()));
-                    outForML.print(" " + (0.3 / elapsedTime + 0.7 * Length.routeLength1(neighbour.getTour())) / (1 / elapsedTime + 1 / Length.routeLength1(neighbour.getTour())));
                     if (debug) {
                         System.out.println(neighbour);
                     }
@@ -152,13 +155,51 @@ public class Scheduler {
                     out.println("       [5] Insertion Heuristic : ");
                     startingTime = System.currentTimeMillis();
                     Insertion insertion = new Insertion(adjMatrixFromTspFile);
-                    elapsedTime = System.currentTimeMillis() - startingTime;
+                    elapsedTime5 = System.currentTimeMillis() - startingTime;
+                    if (elapsedTime5 == 0) elapsedTime5 = 1;
+                    d5 = insertion.getLength_path();
                     out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, insertion.getLength_path());
-                    outForML.println(" " + (0.3 / elapsedTime + 0.7 * insertion.getLength_path()) / (1 / elapsedTime + 1 / insertion.getLength_path()));
                     if (debug) {
                         System.out.println(insertion);
                     }
                 }
+                double NormDistance = Math.sqrt(d1 * d1 + d2 * d2 + d3 * d3 + d4 * d4 + d5 * d5);
+                double NormTime = Math.sqrt(elapsedTime1 * elapsedTime1 + elapsedTime2 * elapsedTime2 +
+                        elapsedTime3 * elapsedTime3 + elapsedTime4 * elapsedTime4 + elapsedTime5 * elapsedTime5);
+                double NormeParams = Math.sqrt(dimension * dimension + avg * avg + var * var + med * med +
+                        min * min + max * max + avgMin * avgMin + avgMax * avgMax);
+                //distances
+                d1 = d1 / NormDistance;
+                d2 = d2 / NormDistance;
+                d3 = d3 / NormDistance;
+                d4 = d4 / NormDistance;
+                d5 = d5 / NormDistance;
+                double d[] = {d1, d2, d3, d4, d5};
+                //time
+                double t1 = elapsedTime1 / NormTime;
+                double t2 = elapsedTime2 / NormTime;
+                double t3 = elapsedTime3 / NormTime;
+                double t4 = elapsedTime4 / NormTime;
+                double t5 = elapsedTime5 / NormTime;
+                double t[] = {t1, t2, t3, t4, t5};
+                //params
+                double size = dimension / NormeParams;
+                avg = avg / NormeParams;
+                var = var / NormeParams;
+                med = med / NormeParams;
+                min = min / NormeParams;
+                max = max / NormeParams;
+                avgMin = avgMin / NormeParams;
+                avgMax = avgMax / NormeParams;
+                outForML.print(size + " " + avg + " " + var + " " + min + " " + max + " " + med
+                        + " " + avgMin + " " + avgMax);
+                //apply the format:
+                double res[] = new double[5];
+                for (int counter = 0; counter < t.length; counter++) {
+                    res[counter] = (0.3 * t[counter] + 0.7 * d[counter]) / (1 / t[counter] + 1 / d[counter]);
+                    outForML.print(" " + res[counter]);
+                }
+                outForML.println();
                 System.out.println("[" + (i + 1) + "]   " + name + ":  ✔ ");
             }
         }

@@ -1,0 +1,1020 @@
+*********************************************************************************
+File N° 1      a280.tsp
+       Dimension : 280
+       Known Lower Bound : 2579.0
+       Min    : 0.0 , 8.0 , 8.0
+       Max    : 8.94427190999916 , 8.94427190999916 , 8.94427190999916
+       Avg    : 121.81683881975168
+       Var    : 3921.2817599367786
+       Median : 116.27553482998907
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    2852.866143 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    3148.109935
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   34278.907993 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    3148.109935 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :    4058.235195 
+*********************************************************************************
+File N° 2      ali535.tsp
+       Dimension : 535
+       Known Lower Bound : 202310.0
+       Min    : 0.0 , 0.0 , 0.0
+       Max    : 1.7779201331893408 , 1.7763445611704964 , 1.7763445611704964
+       Avg    : 73.42911067753457
+       Var    : 2730.0944583777623
+       Median : 69.40963117608392
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    2249.852464 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    2671.068338
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   38784.311150 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    2671.068338 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :    2872.951049 
+*********************************************************************************
+File N° 3      berlin52.tsp
+       Dimension : 52
+       Known Lower Bound : 7542.0
+       Min    : 15.0 , 15.811388300841896 , 21.213203435596427
+       Max    : 90.13878188659973 , 87.46427842267951 , 86.31338250816034
+       Avg    : 575.2634949409301
+       Var    : 115497.4581455112
+       Median : 525.0238089839355
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    7834.506850 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    8980.918279
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   33078.975228 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    8980.918279 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   10229.068833 
+*********************************************************************************
+File N° 4      bier127.tsp
+       Dimension : 127
+       Known Lower Bound : 118282.0
+       Min    : 116.0 , 116.0 , 116.0
+       Max    : 478.28025257164865 , 478.28025257164865 , 478.28025257164865
+       Avg    : 4952.476090638159
+       Var    : 9498934.507415406
+       Median : 4372.753823393217
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :  125396.787478 
+       [2] 2-OPT : 
+        		time :       0ms         distance :  135751.778048
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  610346.592542 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :  135751.778048 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :  157325.026207 
+*********************************************************************************
+File N° 5      burma14.tsp
+       Dimension : 14
+       Known Lower Bound : 3323.0
+       Min    : 0.23000000000000043 , 0.6648308055437824 , 0.7543208866258478
+       Max    : 2.009999999999991 , 1.988818744883513 , 1.8115739013355214
+       Avg    : 4.407980896139021
+       Var    : 5.145928595097598
+       Median : 4.124184767926862
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :      31.226915 
+       [2] 2-OPT : 
+        		time :       0ms         distance :      38.688108
+       [3] Random Heuristic : 
+         		time :       0ms         distance :      67.016346 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :      38.688108 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :      37.722499 
+*********************************************************************************
+File N° 6      ch130.tsp
+       Dimension : 130
+       Known Lower Bound : 6110.0
+       Min    : 0.6601809903932513 , 2.2362304119396357 , 2.6438361889715174
+       Max    : 48.627691627479834 , 48.5776048959599 , 48.11918582766677
+       Avg    : 356.2238798424555
+       Var    : 28893.96451396707
+       Median : 348.1242515631431
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    6519.430700 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    7575.286292
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   47246.164117 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    7575.286292 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :    8495.143152 
+*********************************************************************************
+File N° 7      ch150.tsp
+       Dimension : 150
+       Known Lower Bound : 6528.0
+       Min    : 1.649216924729638 , 9.723136173199281 , 10.336367430225085
+       Max    : 48.22194505492958 , 48.21097590480314 , 48.19794188073303
+       Avg    : 359.310649084125
+       Var    : 28678.29300308676
+       Median : 352.69732021769715
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    7286.021565 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    8194.614332
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   55763.538805 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    8194.614332 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :    9228.931343 
+*********************************************************************************
+File N° 8      d198.tsp
+       Dimension : 198
+       Known Lower Bound : 15780.0
+       Min    : 22.936869882353186 , 22.93686988235331 , 25.399999999999864
+       Max    : 50.799999999999955 , 50.799999999999955 , 50.799999999999955
+       Avg    : 962.7615673712052
+       Var    : 648676.2529993093
+       Median : 705.7361546640501
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   16366.187834 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   18620.073812
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  177270.347075 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   18620.073812 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   19669.869611 
+*********************************************************************************
+File N° 9      d493.tsp
+       Dimension : 493
+       Known Lower Bound : 35002.0
+       Min    : 17.96051224213805 , 17.96051224213837 , 17.960512242138535
+       Max    : 45.125270082294264 , 45.125270082294264 , 45.125270082294264
+       Avg    : 911.8987775950467
+       Var    : 348515.30376489344
+       Median : 804.1612400507747
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   37905.513902 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   43646.376134
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  447263.176816 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   43646.376134 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   48383.746334 
+*********************************************************************************
+File N° 10      d657.tsp
+       Dimension : 657
+       Known Lower Bound : 48912.0
+       Min    : 17.96051224213805 , 17.96051224213805 , 17.96051224213805
+       Max    : 71.84204896855333 , 71.84204896855333 , 71.84204896855333
+       Avg    : 1301.3287121417752
+       Var    : 415564.54331608
+       Median : 1263.5693451488921
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   55238.718818 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   62176.401032
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  855210.511649 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   62176.401032 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   68028.220664 
+*********************************************************************************
+File N° 11      dj38.tsp
+       Dimension : 38
+       Known Lower Bound : 888.0
+       Min    : 5.36476386805619 , 11.827619382191655 , 16.666699999999764
+       Max    : 165.20401444544245 , 163.62644159453566 , 159.69202342534444
+       Avg    : 727.7594396994701
+       Var    : 140096.5126316874
+       Median : 713.5791793296975
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    6659.431533 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    9748.946705
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   30436.313566 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    9748.946705 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :    8778.712912 
+*********************************************************************************
+File N° 12      eil101.tsp
+       Dimension : 101
+       Known Lower Bound : 629.0
+       Min    : 1.4142135623730951 , 2.0 , 2.23606797749979
+       Max    : 6.082762530298219 , 6.082762530298219 , 6.082762530298219
+       Avg    : 33.951657212847756
+       Var    : 266.90239824385657
+       Median : 33.28663395418648
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :     664.423355 
+       [2] 2-OPT : 
+        		time :       0ms         distance :     825.242323
+       [3] Random Heuristic : 
+         		time :       0ms         distance :    3208.368830 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :     825.242323 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :     869.937877 
+*********************************************************************************
+File N° 13      eil51.tsp
+       Dimension : 51
+       Known Lower Bound : 426.0
+       Min    : 2.23606797749979 , 5.0 , 5.0990195135927845
+       Max    : 9.055385138137417 , 9.055385138137417 , 9.0
+       Avg    : 32.42625902205594
+       Var    : 226.84988269728038
+       Median : 31.32091952673165
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :     439.255679 
+       [2] 2-OPT : 
+        		time :       0ms         distance :     513.610007
+       [3] Random Heuristic : 
+         		time :       0ms         distance :    1448.049738 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :     513.610007 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :     600.366768 
+*********************************************************************************
+File N° 14      eil76.tsp
+       Dimension : 76
+       Known Lower Bound : 538.0
+       Min    : 2.23606797749979 , 3.0 , 3.0
+       Max    : 7.211102550927978 , 7.211102550927978 , 7.211102550927978
+       Avg    : 33.229646014965
+       Var    : 248.2155380008228
+       Median : 32.202484376209235
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :     557.668409 
+       [2] 2-OPT : 
+        		time :       0ms         distance :     711.993293
+       [3] Random Heuristic : 
+         		time :       0ms         distance :    2552.811411 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :     711.993293 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :     733.118913 
+*********************************************************************************
+File N° 15      fl417.tsp
+       Dimension : 417
+       Known Lower Bound : 11861.0
+       Min    : 8.35093407949055 , 8.35093407949055 , 8.35093407949055
+       Max    : 11.810000000000002 , 11.810000000000002 , 11.810000000000002
+       Avg    : 1189.517743704831
+       Var    : 469327.7071432179
+       Median : 1176.5833687950037
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   18202.764374 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   15114.118639
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  499014.559941 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   15114.118639 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   16940.290842 
+*********************************************************************************
+File N° 16      gil262.tsp
+       Dimension : 262
+       Known Lower Bound : 2378.0
+       Min    : 1.0 , 1.0 , 1.0
+       Max    : 9.848857801796104 , 9.848857801796104 , 9.848857801796104
+       Avg    : 101.93686483026568
+       Var    : 2327.6766765817933
+       Median : 100.56838469419701
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    2572.557355 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    3241.466837
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   27754.164631 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    3241.466837 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :    3454.897806 
+*********************************************************************************
+File N° 17      gr137.tsp
+       Dimension : 137
+       Known Lower Bound : 69853.0
+       Min    : 0.7280109889280534 , 0.9924716620639588 , 1.2725171904536299
+       Max    : 4.790511454949247 , 4.731141511305703 , 4.702020842148615
+       Avg    : 44.73997829625016
+       Var    : 717.2721031717184
+       Median : 39.58422160406845
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :     746.886738 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    1022.221009
+       [3] Random Heuristic : 
+         		time :       0ms         distance :    6150.587024 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    1022.221009 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :     916.603019 
+*********************************************************************************
+File N° 18      gr202.tsp
+       Dimension : 202
+       Known Lower Bound : 40160.0
+       Min    : 0.03999999999999915 , 0.08000000000000007 , 0.11704699910719572
+       Max    : 1.4075865870346986 , 1.4073023839957106 , 1.4061649974309565
+       Avg    : 15.535697880302536
+       Var    : 137.50712324724017
+       Median : 13.357582116535912
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :     508.040509 
+       [2] 2-OPT : 
+        		time :       0ms         distance :     619.395353
+       [3] Random Heuristic : 
+         		time :       0ms         distance :    3025.025823 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :     619.395353 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :     645.938067 
+*********************************************************************************
+File N° 19      gr229.tsp
+       Dimension : 229
+       Known Lower Bound : 134602.0
+       Min    : 0.3712142238654163 , 0.4341658669218497 , 0.6184658438426449
+       Max    : 4.424850279952984 , 4.41191568369116 , 4.3900455578501685
+       Avg    : 69.51455352741539
+       Var    : 3389.8202721007515
+       Median : 55.161860918573076
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    1810.125326 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    2014.710621
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   16497.351788 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    2014.710621 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :    2086.186466 
+*********************************************************************************
+File N° 20      gr431.tsp
+       Dimension : 431
+       Known Lower Bound : 171414.0
+       Min    : 0.03999999999999915 , 0.08000000000000007 , 0.11704699910719572
+       Max    : 2.013578903345979 , 2.010024875467961 , 2.008083663595718
+       Avg    : 67.5754539319612
+       Var    : 2889.5164519423656
+       Median : 54.64474357154583
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    2205.549922 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    2516.247196
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   28561.300049 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    2516.247196 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :    2512.672008 
+*********************************************************************************
+File N° 21      gr96.tsp
+       Dimension : 96
+       Known Lower Bound : 55209.0
+       Min    : 0.02236067977499742 , 0.384707681233428 , 0.707106781186547
+       Max    : 4.594616414892542 , 4.592134579909435 , 4.578493201916978
+       Avg    : 35.103982468521515
+       Var    : 312.66526660412
+       Median : 33.6627152796681
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :     591.696126 
+       [2] 2-OPT : 
+        		time :       0ms         distance :     707.089993
+       [3] Random Heuristic : 
+         		time :       0ms         distance :    3484.209242 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :     707.089993 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :     703.975925 
+*********************************************************************************
+File N° 22      kroA100.tsp
+       Dimension : 100
+       Known Lower Bound : 21282.0
+       Min    : 13.038404810405298 , 23.345235059857504 , 40.0
+       Max    : 236.54386485385749 , 234.07904647789388 , 232.74449510138794
+       Avg    : 1710.706943058434
+       Var    : 839132.3462847979
+       Median : 1585.8098877229893
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   21517.779027 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   26856.388591
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  175371.781086 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   26856.388591 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   29427.986889 
+*********************************************************************************
+File N° 23      kroA150.tsp
+       Dimension : 150
+       Known Lower Bound : 26524.0
+       Min    : 13.038404810405298 , 21.633307652783937 , 22.135943621178654
+       Max    : 196.4306493396588 , 195.48913013259843 , 195.04102132628407
+       Avg    : 1717.360545944629
+       Var    : 844621.2597517848
+       Median : 1597.2000500876527
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   28142.890931 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   33609.866971
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  264241.585190 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   33609.866971 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   38606.099194 
+*********************************************************************************
+File N° 24      kroA200.tsp
+       Dimension : 200
+       Known Lower Bound : 29368.0
+       Min    : 10.295630140987 , 13.038404810405298 , 14.7648230602334
+       Max    : 156.7322557739791 , 156.3873396410336 , 156.18578680533003
+       Avg    : 1701.17489390707
+       Var    : 841561.1445613705
+       Median : 1581.8881123518186
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   30292.981733 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   35798.408974
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  355286.293592 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   35798.408974 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   41204.899143 
+*********************************************************************************
+File N° 25      kroB100.tsp
+       Dimension : 100
+       Known Lower Bound : 22141.0
+       Min    : 26.0 , 30.14962686336267 , 31.144823004794873
+       Max    : 251.24689052802225 , 246.4731222669117 , 245.93495074917675
+       Avg    : 1687.5510354602698
+       Var    : 833389.703525052
+       Median : 1550.6308393682875
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   22511.056602 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   29155.043704
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  160811.651905 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   29155.043704 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   29198.714760 
+*********************************************************************************
+File N° 26      kroB150.tsp
+       Dimension : 150
+       Known Lower Bound : 26130.0
+       Min    : 8.06225774829855 , 17.72004514666935 , 18.867962264113206
+       Max    : 185.04323819042943 , 182.7840255602223 , 181.8598361376145
+       Avg    : 1711.6175666827783
+       Var    : 850824.5133871329
+       Median : 1589.2265414345432
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   27625.607090 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   32825.749888
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  275121.701246 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   32825.749888 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   37196.546888 
+*********************************************************************************
+File N° 27      kroB200.tsp
+       Dimension : 200
+       Known Lower Bound : 29437.0
+       Min    : 5.0 , 9.0 , 10.198039027185569
+       Max    : 158.15498727514097 , 157.54364474646383 , 157.42934923323543
+       Avg    : 1664.1867426046879
+       Var    : 796300.2359900523
+       Median : 1545.7975287857075
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   31726.685865 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   36981.590141
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  334137.479545 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   36981.590141 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   41025.929673 
+*********************************************************************************
+File N° 28      kroC100.tsp
+       Dimension : 100
+       Known Lower Bound : 20749.0
+       Min    : 17.72004514666935 , 24.73863375370596 , 27.202941017470888
+       Max    : 234.34163095788165 , 232.43278598338918 , 232.14219780126146
+       Avg    : 1700.556765984456
+       Var    : 829450.2563715576
+       Median : 1576.0003172588513
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   21653.092868 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   26327.362110
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  179384.173781 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   26327.362110 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   29312.541827 
+*********************************************************************************
+File N° 29      kroD100.tsp
+       Dimension : 100
+       Known Lower Bound : 21294.0
+       Min    : 11.661903789690601 , 14.0 , 21.02379604162864
+       Max    : 229.55827146935917 , 228.74002710500844 , 228.56071403458645
+       Avg    : 1631.103672790996
+       Var    : 752049.9221430767
+       Median : 1517.6709129452274
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   21703.732071 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   26950.461223
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  157739.429338 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   26950.461223 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   28183.674878 
+*********************************************************************************
+File N° 30      kroE100.tsp
+       Dimension : 100
+       Known Lower Bound : 22068.0
+       Min    : 22.135943621178654 , 40.311288741492746 , 44.553338819890925
+       Max    : 242.71176320895532 , 242.00206610688264 , 239.82702099638396
+       Avg    : 1732.1589088432715
+       Var    : 871520.6496664009
+       Median : 1615.5992696210283
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   22736.962844 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   27587.187458
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  172543.526798 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   27587.187458 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   31897.670026 
+*********************************************************************************
+File N° 31      lin105.tsp
+       Dimension : 105
+       Known Lower Bound : 14379.0
+       Min    : 31.0 , 31.0 , 31.0
+       Max    : 126.0 , 126.0 , 126.0
+       Avg    : 1177.3545365852135
+       Var    : 450038.7856584067
+       Median : 1070.4139386237457
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   14763.458622 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   20362.757417
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  115460.689688 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   20362.757417 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   22154.789525 
+*********************************************************************************
+File N° 32      lin318.tsp
+       Dimension : 318
+       Known Lower Bound : 42029.0
+       Min    : 31.0 , 31.0 , 31.0
+       Max    : 126.0 , 126.0 , 126.0
+       Avg    : 1849.0460971552243
+       Var    : 813408.6696740617
+       Median : 1782.407641366026
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   48114.503742 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   54033.576773
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  571056.303584 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   54033.576773 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   62622.721852 
+*********************************************************************************
+File N° 33      pcb442.tsp
+       Dimension : 442
+       Known Lower Bound : 50778.0
+       Min    : 50.0 , 50.0 , 59.0
+       Max    : 100.0 , 100.0 , 100.0
+       Avg    : 1747.997574649392
+       Var    : 690028.7481120926
+       Median : 1711.724276862369
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   55300.064864 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   61984.047257
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  810053.682441 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   61984.047257 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   78744.418333 
+*********************************************************************************
+File N° 34      pr107.tsp
+       Dimension : 107
+       Known Lower Bound : 44303.0
+       Min    : 200.0 , 200.0 , 200.0
+       Max    : 282.842712474619 , 282.842712474619 , 282.842712474619
+       Avg    : 5404.229855748826
+       Var    : 9642478.99968397
+       Median : 7084.666541200087
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   51158.807179 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   46678.154157
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  622158.269202 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   46678.154157 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   60046.686649 
+*********************************************************************************
+File N° 35      pr124.tsp
+       Dimension : 124
+       Known Lower Bound : 59030.0
+       Min    : 150.0 , 152.0690632574555 , 152.0690632574555
+       Max    : 378.3186487605389 , 378.3186487605389 , 375.0
+       Avg    : 5623.356451679676
+       Var    : 8113664.347696098
+       Median : 5911.733163802304
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   63602.985627 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   69299.425216
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  719318.297436 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   69299.425216 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   87263.697198 
+*********************************************************************************
+File N° 36      pr136.tsp
+       Dimension : 136
+       Known Lower Bound : 96772.0
+       Min    : 170.0 , 170.0 , 170.0
+       Max    : 708.8370757797592 , 708.8370757797592 , 708.8370757797592
+       Avg    : 6073.985956360521
+       Var    : 8675502.884288073
+       Median : 6234.929751007625
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   98557.861610 
+       [2] 2-OPT : 
+        		time :       0ms         distance :  120777.859611
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  837928.611878 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :  120777.859611 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :  145837.094488 
+*********************************************************************************
+File N° 37      pr144.tsp
+       Dimension : 144
+       Known Lower Bound : 58537.0
+       Min    : 100.0 , 100.0 , 100.0
+       Max    : 200.0 , 200.0 , 200.0
+       Avg    : 5639.511451059623
+       Var    : 7915411.370368255
+       Median : 5450.05733914791
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   64433.531984 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   61650.719795
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  872460.795932 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   61650.719795 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   88628.949108 
+*********************************************************************************
+File N° 38      pr152.tsp
+       Dimension : 152
+       Known Lower Bound : 73682.0
+       Min    : 75.23961722390672 , 75.23961722390672 , 75.23961722390672
+       Max    : 277.1461708196597 , 277.1461708196597 , 277.1461708196597
+       Avg    : 6914.839959010469
+       Var    : 1.3457349587699417E7
+       Median : 7033.135858207205
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   80017.630083 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   85702.953657
+       [3] Random Heuristic : 
+         		time :       0ms         distance : 1044431.609980 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   85702.953657 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   94510.214469 
+*********************************************************************************
+File N° 39      pr226.tsp
+       Dimension : 226
+       Known Lower Bound : 80369.0
+       Min    : 100.0 , 100.0 , 100.0
+       Max    : 141.4213562373095 , 141.4213562373095 , 141.4213562373095
+       Avg    : 7503.014023282472
+       Var    : 1.375601802955344E7
+       Median : 7755.804278087477
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :  106621.573310 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   94685.454197
+       [3] Random Heuristic : 
+         		time :       0ms         distance : 1640123.222154 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   94685.454197 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :  120039.222263 
+*********************************************************************************
+File N° 40      pr264.tsp
+       Dimension : 264
+       Known Lower Bound : 49135.0
+       Min    : 100.0 , 100.0 , 100.0
+       Max    : 200.0 , 200.0 , 200.0
+       Avg    : 4248.459526966063
+       Var    : 6543125.061719118
+       Median : 5273.755777432247
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   61592.128845 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   58022.856841
+       [3] Random Heuristic : 
+         		time :       0ms         distance : 1023683.019580 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   58022.856841 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   69616.476116 
+*********************************************************************************
+File N° 41      pr299.tsp
+       Dimension : 299
+       Known Lower Bound : 48191.0
+       Min    : 1.0 , 1.0 , 1.4142135623730951
+       Max    : 158.11388300841898 , 158.11388300841898 , 158.11388300841898
+       Avg    : 2540.6219501945898
+       Var    : 2143772.2888116078
+       Median : 2319.4827009486403
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   54380.182976 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   59899.009675
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  745532.227533 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   59899.009675 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   66755.794341 
+*********************************************************************************
+File N° 42      pr439.tsp
+       Dimension : 439
+       Known Lower Bound : 107217.0
+       Min    : 90.13878188659973 , 90.13878188659973 , 100.0
+       Max    : 200.0 , 200.0 , 200.0
+       Avg    : 4338.295286920622
+       Var    : 6747955.2499847915
+       Median : 4130.4509439043095
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :  127332.263543 
+       [2] 2-OPT : 
+        		time :       0ms         distance :  131282.092115
+       [3] Random Heuristic : 
+         		time :       0ms         distance : 1755949.132796 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :  131282.092115 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :  150902.578485 
+*********************************************************************************
+File N° 43      pr76.tsp
+       Dimension : 76
+       Known Lower Bound : 108159.0
+       Min    : 300.0 , 300.0 , 522.0153254455275
+       Max    : 1390.1438774457845 , 1390.1438774457845 , 1390.1438774457845
+       Avg    : 7558.707356686311
+       Var    : 1.5320057868958678E7
+       Median : 7107.754075655685
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :  109190.791482 
+       [2] 2-OPT : 
+        		time :       0ms         distance :  153461.922502
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  611593.246781 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :  153461.922502 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :  148910.702087 
+*********************************************************************************
+File N° 44      qa194.tsp
+       Dimension : 194
+       Known Lower Bound :  UNKNOWN
+       Min    : 1.0016221443283746 , 1.4164095629423863 , 2.7777800002890753
+       Max    : 23.612734192593823 , 23.41918939886903 , 23.414174771917526
+       Avg    : 479.41758253705973
+       Var    : 69449.78020799358
+       Median : 467.71130973399926
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    9809.141081 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   11892.888059
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   90355.770652 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   11892.888059 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   12297.200106 
+*********************************************************************************
+File N° 45      rat195.tsp
+       Dimension : 195
+       Known Lower Bound : 2323.0
+       Min    : 6.324555320336759 , 6.324555320336759 , 6.4031242374328485
+       Max    : 14.142135623730951 , 14.142135623730951 , 14.142135623730951
+       Avg    : 116.53558971774522
+       Var    : 4089.7337808952466
+       Median : 105.94810050208545
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    2392.946227 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    2761.957360
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   22947.401795 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    2761.957360 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :    3534.773032 
+*********************************************************************************
+File N° 46      rat99.tsp
+       Dimension : 99
+       Known Lower Bound : 1211.0
+       Min    : 4.123105625617661 , 5.0 , 6.082762530298219
+       Max    : 14.035668847618199 , 14.035668847618199 , 14.035668847618199
+       Avg    : 85.02065381044542
+       Var    : 2189.6182957742553
+       Median : 77.02596964660685
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    1259.557069 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    1564.724855
+       [3] Random Heuristic : 
+         		time :       0ms         distance :    8662.803538 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    1564.724855 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :    1703.434966 
+*********************************************************************************
+File N° 47      rd100.tsp
+       Dimension : 100
+       Known Lower Bound : 7910.0
+       Min    : 4.796664361824801 , 8.202925392809593 , 12.804271865279953
+       Max    : 84.01354846094769 , 83.7231050647908 , 83.35435975400448
+       Avg    : 555.6617666198748
+       Var    : 69074.05643421841
+       Median : 554.9148072785588
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :    8382.619695 
+       [2] 2-OPT : 
+        		time :       0ms         distance :    9941.164139
+       [3] Random Heuristic : 
+         		time :       0ms         distance :   56427.594045 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :    9941.164139 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   10802.637226 
+*********************************************************************************
+File N° 48      rd400.tsp
+       Dimension : 400
+       Known Lower Bound : 15281.0
+       Min    : 1.1739771249901285 , 3.7382681819259043 , 4.446543376601653
+       Max    : 42.47093346042675 , 42.469684540858054 , 42.429467105892336
+       Avg    : 528.874658891755
+       Var    : 62775.39688191655
+       Median : 521.4877825545772
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   16238.382807 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   19168.051519
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  203652.155051 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   19168.051519 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   21583.268444 
+*********************************************************************************
+File N° 49      ulysses16.tsp
+       Dimension : 16
+       Known Lower Bound : 6859.0
+       Min    : 0.3883297567789516 , 0.6648308055437869 , 0.7202777242147631
+       Max    : 2.9701515112869252 , 2.9614185789921716 , 2.8524550829066495
+       Avg    : 8.932564656658945
+       Var    : 42.56538782127414
+       Median : 6.967704069490896
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :      74.153567 
+       [2] 2-OPT : 
+        		time :       0ms         distance :     104.734946
+       [3] Random Heuristic : 
+         		time :       0ms         distance :     141.057010 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :     104.734946 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :      83.515450 
+*********************************************************************************
+File N° 50      ulysses22.tsp
+       Dimension : 22
+       Known Lower Bound : 7013.0
+       Min    : 0.08944271909999127 , 0.20808652046684428 , 0.3883297567789516
+       Max    : 2.1023796041628633 , 2.102379604162863 , 2.071714266012566
+       Avg    : 8.269793175105733
+       Var    : 37.60566932582313
+       Median : 6.967704069490896
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :      76.408123 
+       [2] 2-OPT : 
+        		time :       0ms         distance :      89.640796
+       [3] Random Heuristic : 
+         		time :       0ms         distance :     185.609160 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :      89.640796 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :      91.495904 
+*********************************************************************************
+File N° 51      wi29.tsp
+       Dimension : 29
+       Known Lower Bound :  UNKNOWN
+       Min    : 74.53561415712697 , 74.53565887848701 , 106.7186696152543
+       Max    : 900.617093380362 , 891.0043851993363 , 884.6039684130394
+       Avg    : 3796.911459067276
+       Var    : 4596788.145557357
+       Median : 3539.9702213122896
+--------------
+       [1] LinKernighan : 
+        		time :       0ms         distance :   29884.700405 
+       [2] 2-OPT : 
+        		time :       0ms         distance :   36388.059232
+       [3] Random Heuristic : 
+         		time :       0ms         distance :  117145.027555 
+       [4] Nearest Neighbour Heuristic : 
+        		time :       0ms         distance :   36388.059232 
+       [5] Insertion Heuristic : 
+        		time :       0ms         distance :   33940.111662 
