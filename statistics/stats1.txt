@@ -1,0 +1,20 @@
+*********************************************************************************
+File N° 1      u1432.tsp
+       Dimension : 1432
+       Known Lower Bound : 152970.0
+       Min    : 100.0 , 100.0 , 100.0
+       Max    : 100.0 , 100.0 , 100.0
+       Avg    : 2755.542928849028
+       Var    : 1783588.3755670371
+       Median : 2716.615541441225
+--------------
+       [1] LinKernighan :
+        		time :  190727ms         distance :  171359.445578
+       [2] 2-OPT :
+        		time :     300ms         distance :  188815.010321
+       [3] Random Heuristic :
+         		time :       2ms         distance : 4007370.587891
+       [4] Nearest Neighbour Heuristic :
+        		time :      11ms         distance :  188815.010321
+       [5] Insertion Heuristic :
+        		time :    5288ms         distance :  244550.298790

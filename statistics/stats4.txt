@@ -1,40 +1,20 @@
 *********************************************************************************
-File N° 1      fl1400.tsp
-       Dimension : 1400
-       Known Lower Bound : 20127.0
-       Min    : 4.1719300090003735 , 4.1719300090003735 , 4.1719300090003735
-       Max    : 4.181125326990359 , 4.181125326990359 , 4.181125326990359
-       Avg    : 1206.0038123900056
-       Var    : 502781.614320651
-       Median : 1174.585605949605
+File N° 1      nrw1379.tsp
+       Dimension : 1379
+       Known Lower Bound : 56638.0
+       Min    : 2.8284271247461903 , 3.0 , 5.0
+       Max    : 44.77722635447622 , 44.77722635447622 , 44.77722635447622
+       Avg    : 1032.3409837691063
+       Var    : 295570.19236012
+       Median : 975.5946904324562
 --------------
        [1] LinKernighan : 
-        		time :       0ms         distance :   24814.340435 
+        		time :  507387ms         distance :   59144.712873 
        [2] 2-OPT : 
-        		time :       0ms         distance :   26971.884957
+        		time :     356ms         distance :   70015.457122
        [3] Random Heuristic : 
-         		time :       0ms         distance : 1686151.186579 
+         		time :       2ms         distance : 1390964.229343 
        [4] Nearest Neighbour Heuristic : 
-        		time :       0ms         distance :   26971.884957 
+        		time :      13ms         distance :   70015.457122 
        [5] Insertion Heuristic : 
-        		time :       0ms         distance :   29258.554828 
-*********************************************************************************
-File N° 2      fl1577.tsp
-       Dimension : 1577
-       Known Lower Bound : 22204.0
-       Min    : 8.35093407949055 , 8.35093407949055 , 8.35093407949055
-       Max    : 11.820000000000164 , 11.820000000000164 , 11.820000000000164
-       Avg    : 859.3676564217452
-       Var    : 218643.46409583034
-       Median : 808.8499270105674
---------------
-       [1] LinKernighan : 
-        		time :       0ms         distance :   34964.622860 
-       [2] 2-OPT : 
-        		time :       0ms         distance :   27940.913819
-       [3] Random Heuristic : 
-         		time :       0ms         distance : 1342346.414118 
-       [4] Nearest Neighbour Heuristic : 
-        		time :       0ms         distance :   27940.913819 
-       [5] Insertion Heuristic : 
-        		time :       0ms         distance :   33715.567823 
+        		time :    4093ms         distance :   80965.149796 

@@ -90,7 +90,7 @@ public class Scheduler {
                     lk.runAlgorithm();
                     elapsedTime1 = System.currentTimeMillis() - startingTime;
                     if (elapsedTime1 == 0) elapsedTime1 = 1;
-                    out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, lk.getDistance());
+                    out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime1, lk.getDistance());
                     d1 = lk.getDistance();
                     if (debug) {
                         System.out.println(lk);
@@ -111,7 +111,7 @@ public class Scheduler {
                     elapsedTime2 = System.currentTimeMillis() - startingTime;
                     if (elapsedTime2 == 0) elapsedTime2 = 1;
                     d2 = length;
-                    out.printf("        \t\ttime : %7dms         distance :%15f\n", elapsedTime, length);
+                    out.printf("        \t\ttime : %7dms         distance :%15f\n", elapsedTime2, length);
                     if (debug) {
                         int[] twoOPT_tour = new int[result.size()];
                         Arrays.fill(twoOPT_tour, 0);
@@ -130,7 +130,7 @@ public class Scheduler {
                     if (elapsedTime3 == 0) elapsedTime3 = 1;
                     d3 = randomHeuristic.getDistance();
                     randomHeuristic.getRandomTour();
-                    out.printf("         \t\ttime : %7dms         distance :%15f \n", elapsedTime, randomHeuristic.getDistance());
+                    out.printf("         \t\ttime : %7dms         distance :%15f \n", elapsedTime3, randomHeuristic.getDistance());
                     if (debug) {
                         System.out.println(randomHeuristic);
                     }
@@ -145,7 +145,7 @@ public class Scheduler {
                     elapsedTime4 = System.currentTimeMillis() - startingTime;
                     if (elapsedTime4 == 0) elapsedTime4 = 1;
                     d4 = Length.routeLength1(neighbour.getTour());
-                    out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, Length.routeLength1(neighbour.getTour()));
+                    out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime4, Length.routeLength1(neighbour.getTour()));
                     if (debug) {
                         System.out.println(neighbour);
                     }
@@ -158,7 +158,7 @@ public class Scheduler {
                     elapsedTime5 = System.currentTimeMillis() - startingTime;
                     if (elapsedTime5 == 0) elapsedTime5 = 1;
                     d5 = insertion.getLength_path();
-                    out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime, insertion.getLength_path());
+                    out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime5, insertion.getLength_path());
                     if (debug) {
                         System.out.println(insertion);
                     }
