@@ -42,7 +42,7 @@ public class Scheduler {
         PrintWriter outForML = new PrintWriter(new File(statisticsPath + ".MLFormat"));
         List<Double> minMax;
         int dimension;
-        double knownLowerBound, tInverse, dInverse;
+        double knownLowerBound;
         Parser in;
         long elapsedTime1, elapsedTime2, elapsedTime3, elapsedTime4, elapsedTime5;
         double d1, d2, d3, d4, d5;
@@ -56,6 +56,10 @@ public class Scheduler {
                 dimension = adjMatrixFromTspFile[0].length;
                 minMax = utils.minMax(adjMatrixFromTspFile);
                 knownLowerBound = utils.getKnownLowerBound(knownLowerBounds, listOfFiles[i].getName());
+                double LB = knownLowerBound;
+//                if (LB != 0.0) {
+//                    System.out.println(listOfFiles[i].getName() + "       " + LB);
+//                }
                 if (debug) {
                     System.out.println(Arrays.deepToString(adjMatrixFromTspFile));
                 }
@@ -68,6 +72,7 @@ public class Scheduler {
                 } else {
                     out.println(knownLowerBound);
                 }
+                /*writing stats*/
                 out.println("       Min    : " + minMax.get(0) + " , " + minMax.get(1) + " , " + minMax.get(2));
                 out.println("       Max    : " + minMax.get(dimension - 1) + " , " + minMax.get(dimension - 2) + " , " + minMax.get(dimension - 3));
                 out.println("       Avg    : " + utils.avg(adjMatrixFromTspFile));
@@ -82,6 +87,7 @@ public class Scheduler {
                 double med = minMax.get(Math.round(minMax.size() / 2));
                 double avgMin = (minMax.get(0) + minMax.get(1) + minMax.get(2)) / 3;
                 double avgMax = (minMax.get(dimension - 1) + minMax.get(dimension - 2) + minMax.get(dimension - 3)) / 3;
+
                 /*the LinKernighan Heuristic*/
                 {
                     LinKernighan lk = new LinKernighan(adjMatrixFromTspFile);
@@ -163,44 +169,37 @@ public class Scheduler {
                         System.out.println(insertion);
                     }
                 }
-                double NormDistance = Math.sqrt(d1 * d1 + d2 * d2 + d3 * d3 + d4 * d4 + d5 * d5);
-                double NormTime = Math.sqrt(elapsedTime1 * elapsedTime1 + elapsedTime2 * elapsedTime2 +
-                        elapsedTime3 * elapsedTime3 + elapsedTime4 * elapsedTime4 + elapsedTime5 * elapsedTime5);
-                double NormeParams = Math.sqrt(dimension * dimension + avg * avg + var * var + med * med +
-                        min * min + max * max + avgMin * avgMin + avgMax * avgMax);
-                //distances
-                d1 = d1 / NormDistance;
-                d2 = d2 / NormDistance;
-                d3 = d3 / NormDistance;
-                d4 = d4 / NormDistance;
-                d5 = d5 / NormDistance;
-                double d[] = {d1, d2, d3, d4, d5};
-                //time
-                double t1 = elapsedTime1 / NormTime;
-                double t2 = elapsedTime2 / NormTime;
-                double t3 = elapsedTime3 / NormTime;
-                double t4 = elapsedTime4 / NormTime;
-                double t5 = elapsedTime5 / NormTime;
-                double t[] = {t1, t2, t3, t4, t5};
-                //params
-                double size = dimension / NormeParams;
-                avg = avg / NormeParams;
-                var = var / NormeParams;
-                med = med / NormeParams;
-                min = min / NormeParams;
-                max = max / NormeParams;
-                avgMin = avgMin / NormeParams;
-                avgMax = avgMax / NormeParams;
-                outForML.print(size + " " + avg + " " + var + " " + min + " " + max + " " + med
-                        + " " + avgMin + " " + avgMax);
-                //apply the format:
-                double res[] = new double[5];
-                for (int counter = 0; counter < t.length; counter++) {
-                    res[counter] = (0.3 * t[counter] + 0.7 * d[counter]) / (1 / t[counter] + 1 / d[counter]);
-                    outForML.print(" " + res[counter]);
+                /*writing results*/
+                {
+                    double NormeParams = Math.sqrt(dimension * dimension + avg * avg + var * var + med * med +
+                            min * min + max * max + avgMin * avgMin + avgMax * avgMax);
+                    //distances
+                    d1 = 1 / (d1 - LB);
+                    d2 = 1 / (d2 - LB);
+                    d3 = 1 / (d3 - LB);
+                    d4 = 1 / (d4 - LB);
+                    d5 = 1 / (d5 - LB);
+                    double d_sum = d1 + d2 + d3 + d4 + d5;
+                    double d[] = {d1 / d_sum, d2 / d_sum, d3 / d_sum, d4 / d_sum, d5 / d_sum};
+                    //params
+                    double size = dimension / NormeParams;
+                    avg = avg / NormeParams;
+                    var = var / NormeParams;
+                    med = med / NormeParams;
+                    min = min / NormeParams;
+                    max = max / NormeParams;
+                    avgMin = avgMin / NormeParams;
+                    avgMax = avgMax / NormeParams;
+                    outForML.print(size + " " + avg + " " + var + " " + min + " " + max + " " + med
+                            + " " + avgMin + " " + avgMax);
+                    //apply the format:
+                    for (int counter = 0; counter < d.length; counter++) {
+                        outForML.print(" " + d[counter]);
+                    }
+                    outForML.println();
+                    System.out.println("[" + (i + 1) + "]   " + name + ":  ✔ ");
                 }
-                outForML.println();
-                System.out.println("[" + (i + 1) + "]   " + name + ":  ✔ ");
+
             }
         }
         out.flush();

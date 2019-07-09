@@ -18,6 +18,7 @@ public class Neighbour {
         return tour;
     }
 
+
     public static ArrayList<Coords> nearest1(ArrayList<Coords> cities) {
 
         ArrayList<Coords> result = new ArrayList<>(); //holds final result.

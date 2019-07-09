@@ -35,7 +35,7 @@ public class utils {
                 sum += Math.pow(value - avg, 2);
             }
         }
-        return sum / list.size();
+        return Math.sqrt(sum / list.size());
     }
 
     public static double avg(double[][] adjMatrix) {
