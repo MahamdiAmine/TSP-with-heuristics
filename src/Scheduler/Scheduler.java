@@ -57,9 +57,6 @@ public class Scheduler {
                 minMax = utils.minMax(adjMatrixFromTspFile);
                 knownLowerBound = utils.getKnownLowerBound(knownLowerBounds, listOfFiles[i].getName());
                 double LB = knownLowerBound;
-//                if (LB != 0.0) {
-//                    System.out.println(listOfFiles[i].getName() + "       " + LB);
-//                }
                 if (debug) {
                     System.out.println(Arrays.deepToString(adjMatrixFromTspFile));
                 }
