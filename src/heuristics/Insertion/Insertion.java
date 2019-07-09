@@ -49,6 +49,7 @@ public class Insertion {
                 localmin = distance[0][i];
             }
         }
+//        localmin=Utils.utils.minMax(distance).get()
         Arc firstArc = new Arc(0, townIndex);
         Arc secondArc = new Arc(townIndex, 0);
         eoft.add(firstArc);
