@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import Utils.utils;
@@ -26,7 +25,7 @@ public class Scheduler {
     private final String dataPath;
     private final String knownLowerBounds;
     private final Boolean debug;
-    private long startingTime, elapsedTime;
+    private long startingTime;
 
     public Scheduler(String statsPath, String dataPath, String knownLowerBounds, boolean debug) {
         this.statisticsPath = statsPath;
@@ -109,7 +108,7 @@ public class Scheduler {
                     double length;
                     nearestN = Neighbour.nearest1(cities);
                     result = TwoOpt.alternate1(nearestN, debug);
-                    length = Length.routeLength1(nearestN);
+                    length = Length.routeLength1(result);
                     Validator.validate1(nearestN, debug);
                     elapsedTime2 = System.currentTimeMillis() - startingTime;
                     if (elapsedTime2 == 0) elapsedTime2 = 1;
@@ -144,13 +143,13 @@ public class Scheduler {
                     out.println("       [4] Nearest Neighbour Heuristic : ");
                     ArrayList<Coords> cities = new ArrayList<>(Load.loadTSPLib1(String.valueOf(listOfFiles[i]))); //alter file name here.
                     startingTime = System.currentTimeMillis();
-                    Neighbour neighbour = new Neighbour(cities);
+                    Neighbour neib = new Neighbour(cities);
                     elapsedTime4 = System.currentTimeMillis() - startingTime;
                     if (elapsedTime4 == 0) elapsedTime4 = 1;
-                    d4 = Length.routeLength1(neighbour.getTour());
-                    out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime4, Length.routeLength1(neighbour.getTour()));
+                    d4 = Length.routeLength1(neib.getTour());
+                    out.printf("        \t\ttime : %7dms         distance :%15f \n", elapsedTime4, d4);
                     if (debug) {
-                        System.out.println(neighbour);
+                        System.out.println(neib);
                     }
                 }
                 /* Insertion Heuristic*/
@@ -196,7 +195,6 @@ public class Scheduler {
                     outForML.println();
                     System.out.println("[" + (i + 1) + "]   " + name + ":  ✔ ");
                 }
-
             }
         }
         out.flush();
