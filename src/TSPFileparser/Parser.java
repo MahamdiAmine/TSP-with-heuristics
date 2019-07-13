@@ -63,17 +63,13 @@ public class Parser {
     public double[][] getAdjacencyMatrix() {
         int dimension = this.id.size();
         double[][] adjacencyMatrix = new double[dimension][dimension];
-
         for (int i = 0; i < dimension - 1; ++i) {
             for (int j = i + 1; j < dimension; ++j) {
                 Coordinates coordinates1 = this.coordinates.get(i);
                 Coordinates coordinates2 = this.coordinates.get(j);
-
                 double X = coordinates2.getX() - coordinates1.getX();
                 double Y = coordinates2.getY() - coordinates1.getY();
-
                 adjacencyMatrix[i][j] = Math.sqrt(Math.pow(X, 2) + Math.pow(Y, 2));
-
                 adjacencyMatrix[j][i] = adjacencyMatrix[i][j];
             }
         }

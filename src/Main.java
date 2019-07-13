@@ -8,7 +8,7 @@ public class Main {
 //            String dataPath = args[0];
             String knownLowerBoundsPath = args[1];
 //            String statsPath = args[2];
-            String statsPath = "statistics/small.txt";
+            String statsPath = "statistics/official.txt";
             Scheduler scheduler = new Scheduler(statsPath, dataPath, knownLowerBoundsPath, false);
             scheduler.Execute();
         } else System.out.println("usage :\n java -jar scheduler.jar dataPath knownLowerBoundsPath statsPath");
