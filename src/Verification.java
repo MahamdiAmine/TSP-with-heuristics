@@ -64,12 +64,6 @@ public class Verification {
         list.add(new Struct("med", med));
         list.add(new Struct("avgMin", avgMin));
         list.add(new Struct("avgMax", avgMax));
-        Collections.sort(list, new Comparator<Struct>() {
-            @Override
-            public int compare(Struct c1, Struct c2) {
-                return Double.compare(c1.getValue(), c2.getValue());
-            }
-        });
         return list;
     }
 
