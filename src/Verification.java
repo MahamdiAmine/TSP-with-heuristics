@@ -8,39 +8,40 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class Verification {
-    private static void readOutputs() throws IOException {
-        String dataPath = "./data_KLB";
-        String statsPath = "./statistics/official.txt.MLFormat";
+    private static ArrayList<Struct> readOutputs(String name, String dataPath, String statsPath) throws IOException {
         File folder = new File(dataPath);
         File[] listOfFiles = folder.listFiles();
         Arrays.sort(listOfFiles);
-        for (int i = 0; i < listOfFiles.length; i++) {
-            String fileName = listOfFiles[i].getName();
-            System.out.printf("[%d]     %s:\n", i, fileName);
-        }
-        Scanner scanner = new Scanner(System.in);
-        int idx;
-        do {
-            System.out.print("Select the dataset to test: ");
-            idx = scanner.nextInt();
-        } while (idx >= listOfFiles.length || idx < 0);
-        String line = Files.readAllLines(Paths.get(statsPath)).get(idx);
-        String[] tokens = line.split(" ");
-        ArrayList<Struct> list = new ArrayList();
-        list.add(new Struct("LinKernighan", Double.parseDouble(tokens[12])));
-        list.add(new Struct("2-OPT", Double.parseDouble(tokens[11])));
-        list.add(new Struct("Random", Double.parseDouble(tokens[10])));
-        list.add(new Struct("Nearest Neighbour", Double.parseDouble(tokens[9])));
-        list.add(new Struct("Insertion", Double.parseDouble(tokens[8])));
-        Collections.sort(list, new Comparator<Struct>() {
-            @Override
-            public int compare(Struct c1, Struct c2) {
-                return Double.compare(c1.getValue(), c2.getValue());
+        boolean found = false;
+        int idx = -1;
+        if (name != null) {
+            for (int i = 0; i < listOfFiles.length; i++) {
+                String fileName = listOfFiles[i].getName();
+                if (fileName.equals(name)) {
+                    found = true;
+                    idx = i;
+                    break;
+                }
             }
-        });
-        for (Struct struct1 : list) {
-            System.out.println(struct1.getName() + "              : " + struct1.getValue());
         }
+        if (found) {
+            String line = Files.readAllLines(Paths.get(statsPath)).get(idx);
+            String[] tokens = line.split(" ");
+            ArrayList<Struct> list = new ArrayList();
+            list.add(new Struct("LinKernighan", Double.parseDouble(tokens[8])));
+            list.add(new Struct("2-OPT", Double.parseDouble(tokens[9])));
+            list.add(new Struct("Random", Double.parseDouble(tokens[10])));
+            list.add(new Struct("Nearest Neighbour", Double.parseDouble(tokens[11])));
+            list.add(new Struct("Insertion", Double.parseDouble(tokens[12])));
+            Collections.sort(list, new Comparator<Struct>() {
+                @Override
+                public int compare(Struct c1, Struct c2) {
+                    return Double.compare(c1.getValue(), c2.getValue());
+                }
+            });
+            return list;
+        } else return null;
+
     }
 
     private static ArrayList<Struct> getStats(String path) {
@@ -73,9 +74,14 @@ public class Verification {
     }
 
     public static void main(String[] args) throws IOException {
-//        readOutputs();
-        ArrayList<Struct> l = getStats("./data_KLB/d198.tsp");
-        for (Struct struct : l) {
+        String dataPath = "./data_KLB";
+        String statsPath = "./statistics/official.txt.MLFormat";
+        String fileName = "berlin52.tsp";
+        String tspFilePath = "./data_KLB/d198.tsp";
+
+        ArrayList<Struct> list = readOutputs(fileName, dataPath, statsPath);
+        ArrayList<Struct> stats = getStats(tspFilePath);
+        for (Struct struct : stats) {
             System.out.println(struct.getName() + "       " + struct.getValue());
         }
     }
